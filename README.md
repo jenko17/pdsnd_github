@@ -4,10 +4,10 @@
 Project created on 21/03/22
 
 ### Project Title
-Replace the Project Title
+Bikeshare usage analysis
 
 ### Description
-Describe what your project is about and what it does
+This project uses python coding to analyse bike share data from 3 cities, Chicago, New York and Washington. The program will ask for user input and provide usage statistics based on the inputs.
 
 ### Files used
 Include the files used
