@@ -22,7 +22,7 @@ def get_filters():
         city = input('Which city would you like to analyse (Chicago, New York City or Washington): ').lower()
         if city not in CITY_DATA:
             print('Please enter one of the three available cities')
-    
+
 
 
     # get user input for month (all, january, february, ... , june)
@@ -31,7 +31,7 @@ def get_filters():
         month = input('Which month would you like to analyse(all, january, february, ... , june): ').lower()
         if month not in month_dict:
             print('Please enter a valid month')
-    
+
 
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
@@ -40,7 +40,7 @@ def get_filters():
         day = input('Which day would you like to analyse(all, monday, tuesday, ... sunday): ').title()
     if day not in day_list:
         print('Please enter a valid day')
-    
+
 
 
     print('-'*40)
@@ -69,7 +69,7 @@ def load_data(city, month, day):
         df = df[df['start_month'] == month_dict[month]]
     if day != 'All':
         df = df[df['start_day_of_week'] == day]
-   
+
     return df
 
 
@@ -81,7 +81,7 @@ def time_stats(df):
 
     # display the most common month
     print('The most popular month to hire a bike is '+ str(df['start_month'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['start_month'].value_counts().tolist()[0]))+' rentals')
-    
+
 
     # display the most common day of week
     print('The most popular day to hire a bike is '+ df['start_day_of_week'].value_counts().index.tolist()[0] + ' with ' + str("{:,}".format(df['start_day_of_week'].value_counts().tolist()[0]))+' rentals')
@@ -142,7 +142,7 @@ def user_stats(df, city):
     start_time = time.time()
 
     # Display counts of user types
-   
+
     print('\nBelow is the number of rentals per user type\n')
     print(df.groupby(['User Type'])['Start Time'].count())
 
@@ -168,6 +168,7 @@ def user_stats(df, city):
     print('-'*40)
 
 def raw_data(df):
+    """Asks user if they want to see some raw data and displays 5 lines at a time if they do"""
     size = 5
     start = 0
     end = size
