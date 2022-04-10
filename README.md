@@ -10,7 +10,12 @@ Bikeshare usage analysis
 This project uses python coding to analyse bike share data from 3 cities, Chicago, New York and Washington. The program will ask for user input and provide usage statistics based on the inputs.
 
 ### Files used
-Include the files used
+#### Code Files
+- bikeshare_2.py
+#### Data Files
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Data provide by [Motivate] (https://www.motivateco.com/)
