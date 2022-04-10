@@ -80,16 +80,22 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-    print('The most popular month to hire a bike is '+ str(df['start_month'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['start_month'].value_counts().tolist()[0]))+' rentals')
+    most_common_month = df['start_month'].value_counts().index.tolist()[0]
+    most_common_month_count = df['start_month'].value_counts().tolist()[0]
+
+    print('The most popular month to hire a bike is {} with {:,} rentals'.format(most_common_month, most_common_month_count))
 
 
     # display the most common day of week
-    print('The most popular day to hire a bike is '+ df['start_day_of_week'].value_counts().index.tolist()[0] + ' with ' + str("{:,}".format(df['start_day_of_week'].value_counts().tolist()[0]))+' rentals')
+    most_common_day = df['start_day_of_week'].value_counts().index.tolist()[0]
+    most_common_day_count = df['start_day_of_week'].value_counts().tolist()[0]
+    print('The most popular day to hire a bike is {} with {:,} rentals'.format(most_common_day, most_common_day_count))
 
 
     # display the most common start hour
-    print('The most popular hour to hire a bike is '+ str(df['start_hour'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['start_hour'].value_counts().tolist()[0]))+' rentals')
-
+    most_common_hour = df['start_hour'].value_counts().index.tolist()[0]
+    most_common_hour_count = df['start_hour'].value_counts().tolist()[0]
+    print('The most popular hour to hire a bike is {} with {:,} rentals'.format(most_common_hour, most_common_hour_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -102,16 +108,22 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    print('The most popular start station is '+ str(df['Start Station'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['Start Station'].value_counts().tolist()[0]))+' rentals')
+    start_station = df['Start Station'].value_counts().index.tolist()[0]
+    start_station_count = df['Start Station'].value_counts().tolist()[0]
 
+    print('The most popular start station is {} with {:,} rentals'.format(start_station, start_station_count))
 
     # display most commonly used end station
-    print('The most popular end station is '+ str(df['End Station'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['End Station'].value_counts().tolist()[0]))+' rentals')
+    end_station = df['End Station'].value_counts().index.tolist()[0]
+    end_station_count = df['End Station'].value_counts().tolist()[0]
 
+    print('The most popular start station is {} with {:,} rentals'.format(end_station, end_station_count))
 
     # display most frequent combination of start station and end station trip
-    print('The most popular route station is '+ str(df['route'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['route'].value_counts().tolist()[0]))+' rentals')
+    route = df['route'].value_counts().index.tolist()[0]
+    route_count = df['route'].value_counts().tolist()[0]
 
+    print('The most popular route is {} with {:,} rentals'.format(route, route_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
