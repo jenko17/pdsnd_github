@@ -108,16 +108,22 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    print('The most popular start station is '+ str(df['Start Station'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['Start Station'].value_counts().tolist()[0]))+' rentals')
+    start_station = df['Start Station'].value_counts().index.tolist()[0]
+    start_station_count = df['Start Station'].value_counts().tolist()[0]
 
+    print('The most popular start station is {} with {:,} rentals'.format(start_station, start_station_count))
 
     # display most commonly used end station
-    print('The most popular end station is '+ str(df['End Station'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['End Station'].value_counts().tolist()[0]))+' rentals')
+    end_station = df['End Station'].value_counts().index.tolist()[0]
+    end_station_count = df['End Station'].value_counts().tolist()[0]
 
+    print('The most popular start station is {} with {:,} rentals'.format(end_station, end_station_count))
 
     # display most frequent combination of start station and end station trip
-    print('The most popular route station is '+ str(df['route'].value_counts().index.tolist()[0]) + ' with ' + str("{:,}".format(df['route'].value_counts().tolist()[0]))+' rentals')
+    route = df['route'].value_counts().index.tolist()[0]
+    route_count = df['route'].value_counts().tolist()[0]
 
+    print('The most popular route is {} with {:,} rentals'.format(route, route_count))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
