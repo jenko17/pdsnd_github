@@ -16,4 +16,4 @@ This project uses python coding to analyse bike share data from 3 cities, Chicag
 - washington.csv
 
 ### Credits
-Data provide by [Motivate] (https://www.motivateco.com/)
+Data provide by [Motivate](https://www.motivateco.com/)
